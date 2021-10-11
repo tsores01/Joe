@@ -36,16 +36,16 @@ if (initial >= 20){
     initial = initial - initial*0.1;
     } else {
     document.write("No Discount<br>");
-    }
-    document.write("Subtotal: $" + initial.toFixed(2) + "<br>");
+}
+document.write("Subtotal: $" + initial.toFixed(2) + "<br>");
 
-    tax = initial*0.0625;
-    document.write("Tax Total: $" + tax.toFixed(2) + "<br>");
+tax = initial*0.0625;
+document.write("Tax Total: $" + tax.toFixed(2) + "<br>");
 
-    final = initial + tax;
-    document.write("You Pay: $" + final.toFixed(2) + "<br>");
+final = initial + tax;
+document.write("You Pay: $" + final.toFixed(2) + "<br>");
 
-    document.write("<br>Thank you for ordering from Joe's Hotdogs!<br>Come again sometime!<br>");
+document.write("<br>Thank you for ordering from Joe's Hotdogs!<br>Come again sometime!<br>");
 </script>
 </body>
 </html>
