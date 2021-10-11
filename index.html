@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW4 COMP20 Joe’s Hotdog Stand</title>
+</head>
+<body>
+
+<h1>Menu</h1>
+
+<h2>Hotdogs: $3.75</h2>
+<h2>French Fries: $2.00</h2>
+<h2>Sodas: $1.50</h2>
+
+<h1>Order:</h1>
+
+<script language="javascript"> 
+hd = prompt ("How many hot dogs would you like to order?", 0);
+hdmoney = 3.25*hd; 
+document.write("Number of Hotdogs: " + hd + "<br>");
+
+f = prompt ("How many fries would you like to order?", 0);
+fmoney = 2.00*f; 
+fmoney = Math.round(fmoney*100) / 100;
+document.write("Number of Fries: " + f + "<br>");
+
+s = prompt ("How many sodas would you like to order?", 0);
+smoney = 1.50*s;
+document.write("Number of Sodas: " + s + "<br>");
+
+initial = hdmoney + fmoney + smoney;
+discount = 0; 
+if (initial >= 20){
+    discount = initial*0.1;
+    document.write("Discount: $" + discount.toFixed(2) + "<br>");
+    initial = initial - initial*0.1;
+    } else {
+    document.write("No Discount<br>");
+    }
+    document.write("Subtotal: $" + initial.toFixed(2) + "<br>");
+
+    tax = initial*0.0625;
+    document.write("Tax Total: $" + tax.toFixed(2) + "<br>");
+
+    final = initial + tax;
+    document.write("You Pay: $" + final.toFixed(2) + "<br>");
+
+    document.write("<br>Thank you for ordering from Joe's Hotdogs!<br>Come again sometime!<br>");
+</script>
+</body>
+</html>
